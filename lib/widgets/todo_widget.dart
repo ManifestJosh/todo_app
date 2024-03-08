@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/model/todo.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 class TodoWidget extends StatelessWidget {
   final Todo todo;
@@ -8,21 +9,24 @@ class TodoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Slidable(
-        actionPane: SlidableDrawerActionPane(),
-        key: Key(todo.id),
-        actions: [
-          IconSlideAction(
-            color: Colors.green,
-            onTap: () {},
-            caption: 'Edit',
-            icon:
-          )
-        ]
+          actionPane: SlidableDrawerActionPane(),
+          key: Key(todo.id),
+          actions: [
+            IconSlideAction(
+              color: Colors.green,
+              onTap: () {},
+              caption: 'Edit',
+              icon: Icons.edit,
+            )
+          ],
+          secondaryActions: [
+            IconSlideAction(
+                color: Colors.red,
+                onTap: () {},
+                caption: 'delete',
+                icon: Icons.delete)
+          ]);
 
-  );
-  
-  
-  
   Widget build(BuildContext context) => Container(
         padding: EdgeInsets.all(20),
         child: Row(
