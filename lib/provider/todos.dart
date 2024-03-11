@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:todo_app/model/todo.dart';
 
 class TodosProvider extends ChangeNotifier {
-  List<Todo> _todos = [
+  final List<Todo> _todos = [
     Todo(
       createdTime: DateTime.now(),
       title: 'Buy Food 😋',
