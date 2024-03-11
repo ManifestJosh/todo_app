@@ -9,7 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  static final String title = 'Todo App';
+  static final String title = 'WHAT TODO';
 
   // This widget is the root of your application.
   @override
@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
           title: title,
           theme: ThemeData(
             primarySwatch: Colors.blue,
-            scaffoldBackgroundColor: Color(0xFFf6ff5ee),
+            primaryColor: Colors.black,
+            scaffoldBackgroundColor: Colors.white,
           ),
           home: const HomePage(),
         ),
